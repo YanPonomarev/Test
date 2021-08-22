@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="main.scss">
 </head>
 <body>
-<div id="introduction" style="width: 100px; height: 100px;"></div>
+<div id="introduction"></div>
     <script id="introduction-template" type="text/x-handlebars-template">
-        <p>Hello, my name is {{name}}!</p>
+        <h1 id="h1_introduction">
+            {{#unless marker}}
+            {{#with variants}}
+            one {{variant_1}}!
+            {{else}}
+            two {{variant_2}}!
+            {{/with}}
+            {{/unless}}
+        </h1>
+        <ul id="List_li">
+            {{#each people}}
+            <li>
+                Номер списка - {{@index}}
+                Значение списка - {{this}}
+            </li>
+            {{/each}}
+        </ul>
     </script>
 <script src="main.js"></script>
 </body>

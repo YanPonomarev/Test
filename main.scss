@@ -1,7 +1,39 @@
-$text_color: red;
+$color_introduction: #8ee89b;
+$color_List_li: #e88ec4;
+$base_color_font: #565656;
 
-#dog {
-  display: flex;
-  justify-content: center;
-  color: $text_color;
+html, body {
+  margin: 0;
 }
+
+#introduction {
+  width: 200px;
+  height: 100px;
+  background-color: $color_introduction;
+}
+
+#introduction:hover {
+    background-color: darken($color_introduction, 10%);
+    #List_li {
+      background-color: darken($color_List_li, 10%);
+      color: darken($base_color_font, 100%);
+    }
+    #h1_introduction {
+      color: darken($base_color_font, 100%);
+    }
+}
+
+#h1_introduction {
+  text-align: center;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  color: $base_color_font;
+}
+
+#List_li {
+  background-color: $color_List_li;
+  color: $base_color_font
+}
+
+//#List_li:hover {
+//  background-color: darken($color_List_li, 10%);
+//}
