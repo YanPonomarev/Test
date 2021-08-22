@@ -10,11 +10,11 @@
     <script id="introduction-template" type="text/x-handlebars-template">
         <h1 id="h1_introduction">
             {{#unless marker}}
-            {{#with variants}}
-            one {{variant_1}}!
+                {{#with variants}}
+                    one {{variant_1}}!
+                {{/with}}
             {{else}}
-            two {{variant_2}}!
-            {{/with}}
+                two {{variants.variant_2}}!
             {{/unless}}
         </h1>
         <ul id="List_li">

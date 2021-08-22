@@ -5,7 +5,7 @@ const source = document.querySelector("#introduction-template").innerHTML;
 const template = Handlebars.compile(source);
 
 const context = {
-    marker: false,
+    marker: true,
     variants: {
         variant_1: "variant 1",
         variant_2: "variant 2"
